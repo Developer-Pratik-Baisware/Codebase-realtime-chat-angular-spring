@@ -1,5 +1,7 @@
 # Hola !
-Real-time Chat & responsive web application (Mobile, Tablet, Desktop & larger screens)
+Real-time Chat & responsive web application (Mobile, Tablet, Desktop & larger screens) <br/><br/>
+<a href="https://www.youtube.com/watch?v=rzfdQcXBQlo" style="font-size : 20px;">
+Click here to watch the demo video</a>
 
 <p align="center">
   <img src="./client/src/assets/hola-logo.png" alt="drawing" width="300" style=""/>
