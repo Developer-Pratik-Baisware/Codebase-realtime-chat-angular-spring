@@ -1,0 +1,81 @@
+
+<div class="form-area container mt-5">
+  <form #f='ngForm' (submit)="onSubmit()">
+    <div class="form-content justify-content-center align-items-center">
+      <div class="form-group mb-2">
+        <input type="text"
+               placeholder="Username"
+               class="form-control text-center"
+               name="username"
+               [(ngModel)]="username"
+               #usernameModel="ngModel"
+               (ngModelChange)="checkForSpace(username)"
+               required
+        >
+
+        <div *ngIf = "usernameModel.errors?.['required']">
+          <div class="alert alert-danger mt-1 validation-msg" *ngIf = 'usernameModel.touched &&  usernameModel.invalid'>
+            Username is required..
+          </div>
+        </div>
+
+        <div *ngIf="hasSpace">
+          <div class="alert alert-danger mt-1 validation-msg">
+            Username cannot contain spaces.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group mb-2">
+        <input type="email"
+               placeholder="Email"
+               class="form-control text-center"
+               name="email"
+               [(ngModel)]="email"
+               #emailModel="ngModel"
+               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+               required
+        >
+
+        <div *ngIf = "emailModel.errors?.['required']">
+          <div class="alert alert-danger mt-1 validation-msg" *ngIf = 'emailModel.touched &&  emailModel.invalid'>Email is required..</div>
+        </div>
+        <div *ngIf = "emailModel.errors?.['pattern']">
+          <div class="alert alert-danger mt-1 validation-msg" *ngIf = 'emailModel.touched &&  emailModel.invalid'>
+            Invalid email address
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-1">
+        <input type="password"
+               placeholder="Password"
+               class="form-control text-center"
+               name="password"
+               [(ngModel)]="password"
+               #passwordModel="ngModel"
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+               required
+        >
+
+        <div *ngIf="passwordModel.errors?.['required']">
+          <div class="alert alert-danger mt-1 validation-msg" *ngIf="passwordModel.touched && passwordModel.invalid">Password is required.</div>
+        </div>
+        <div *ngIf="passwordModel.errors?.['pattern']">
+          <div class="alert alert-danger mt-1 validation-msg" *ngIf="passwordModel.touched && passwordModel.invalid">
+            Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, one digit, and one special character (@$!%*?&).
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mb-1 mt-3">
+        <button type="submit" class="btn btn-secondary submit-btn" [disabled]="f.invalid">Register</button>
+      </div>
+
+      <div *ngIf="errorMessage" class="text-center mt-2 alert alert-danger validation-msg">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </form>
+</div>

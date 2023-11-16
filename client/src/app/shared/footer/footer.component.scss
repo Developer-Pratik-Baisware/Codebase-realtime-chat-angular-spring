@@ -1,0 +1,31 @@
+#github-logo {
+  font-size: 25px;
+}
+
+.footer-items {
+  display: flex;
+  align-items: center;
+}
+
+#github-link {
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0366d6;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#github-link:hover {
+  color: #032f62; /* Darker shade of blue on hover */
+}
+
+.footer {
+  overflow: hidden;
+  position: sticky;
+  top: 100%;
+  //padding: 10px 10px;
+}
+
+.githublink-div {
+  margin-top: 2.1px;
+}

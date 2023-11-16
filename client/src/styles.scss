@@ -1,0 +1,22 @@
+/* Global CSS file */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+$theme-colors: map-merge($theme-colors, (
+  "primary": #d7aa2c,
+  "secondary": #ba4184
+));
+
+@import "bootstrap";
+
+body {
+  background-color: #d7aa2c !important;
+  height: 100vh;
+}
+
+:root {
+  --primary-color: #d7aa2c;
+  --secondary-color: #ba4184;
+}

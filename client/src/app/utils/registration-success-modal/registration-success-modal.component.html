@@ -1,0 +1,11 @@
+<div id="modal-content-wrapper">
+  <div class="modal-content">
+    <mat-dialog-content>
+      <p class="text-success">Great, your account was created successfully <i class="bi bi-emoji-sunglasses"></i> !</p>
+    </mat-dialog-content>
+    <mat-dialog-actions id="modal-footer" class="d-flex justify-content-center">
+      <button class="btn btn-secondary modal-btn" id="login-btn" routerLink="/chat" (click)="closeModal()">Chat</button>
+      <button class="btn btn-primary modal-btn" routerLink="/" (click)="closeModal()">Go to Home page</button>
+    </mat-dialog-actions>
+  </div>
+</div>

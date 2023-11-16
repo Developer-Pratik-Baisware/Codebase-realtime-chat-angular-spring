@@ -1,0 +1,48 @@
+#login-btn {
+  background-color: #ba4184;
+  margin-right: 3px;
+}
+
+#modal-content-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  z-index: 9998; /* Place the backdrop behind the modal */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 1%;
+  margin: 35%;
+}
+
+.text-success {
+  color: #232222 !important;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 430px) {
+  .modal-content {
+    padding: 15%;
+    border-radius: 10px;
+  }
+
+  .modal-btn {
+    width: 92%;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+
+  .text-success {
+    width: 150px;
+  }
+}

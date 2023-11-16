@@ -1,0 +1,18 @@
+<h1 class="c2 text-center">
+    <span class="text-wrapper" #textWrapper>
+    <span class="line line1"></span>
+      <span class="letters">{{ maintext }}</span>
+    </span>
+</h1>
+
+<div class="container mainButtons d-flex flex-column justify-content-center align-items-center">
+    <button type="button" class="btn btn-secondary btn-lg mainButton" id="login"
+            routerLink="/login" (click)="onClickMainButton()">
+      Login
+    </button>
+    <button type="button" class="btn btn-secondary btn-lg mainButton"
+            routerLink="/register" (click)="onClickMainButton()">
+      Sign up
+    </button>
+</div>
+

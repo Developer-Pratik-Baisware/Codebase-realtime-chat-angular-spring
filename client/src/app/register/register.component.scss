@@ -1,0 +1,61 @@
+.submit-btn:hover {
+  background-color: #d25399;
+  transform: scale(1.05);
+}
+
+// Tablets, Desktop and bigger screens
+@media screen and (min-width: 1024px) {
+
+  .submit-btn {
+    background-color: #ba4184;
+    width: 20%;
+    height: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+
+  .form-control {
+    height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .form-area {
+    margin-top: 100px !important;
+  }
+
+  .form-content {
+    display: block;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 430px) {
+  .form-area {
+    position: fixed;
+    top: 20%;
+  }
+  //
+  .form-group {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  //
+  .validation-msg {
+    //height: 30px;
+    font-size: 15px;
+    //padding-top: 10%;
+  }
+}

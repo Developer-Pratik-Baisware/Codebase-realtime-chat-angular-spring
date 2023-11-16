@@ -1,0 +1,30 @@
+
+<div class="form-area container mt-5">
+  <form (submit)="onSubmit()">
+    <div class="form-content justify-content-center align-items-center">
+      <div class="form-group mb-1">
+        <input type="emailOrUsername"
+               placeholder="Email or username"
+               class="form-control text-center"
+               name="email"
+               [(ngModel)]="usernameOrEmail"
+               ngModel>
+      </div>
+      <div class="form-group mb-1 mt-2 form-element mb-3">
+        <input type="password"
+               placeholder="Password"
+               class="form-control text-center"
+               name="email"
+               [(ngModel)]="password"
+               ngModel>
+      </div>
+      <div class="text-center mb-1" id="submit-bt-div">
+        <button type="submit" class="btn btn-secondary submit-btn">Login</button>
+      </div>
+      <div *ngIf="isPresentHttpError" class="text-center mt-2 alert alert-danger" id="info-msg">
+        <h5 id="incorrect-credentials-msg">Incorrect Credentials</h5>
+        <p>Invalid username/email or password</p>
+      </div>
+    </div>
+  </form>
+</div>

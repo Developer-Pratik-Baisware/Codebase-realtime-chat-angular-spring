@@ -1,0 +1,42 @@
+.navbar-brand img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+// Tablets, Desktop and bigger screens
+@media screen and (min-width: 1023px) {
+  #home-item {
+    margin-right: 10px;
+  }
+
+  #aboutus-item {
+    margin-right: 10px;
+  }
+
+  .nav-item button {
+    height: 45px;
+    width: 150px;
+  }
+}
+
+// Mobile devices
+@media screen and (max-width: 430px) {
+  .navbar-brand img {
+    height: 100px;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .nav-item button {
+    width: 100%;
+  }
+
+  .navitems-list {
+    display: flex;
+    align-items: center;
+  }
+}
